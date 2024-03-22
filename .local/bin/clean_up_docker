@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "removing stopped containers"
+
+docker ps -aq -f "status=exited" -f "exited=1" | xargs -r docker rm
+docker ps -aq -f "status=exited" -f "exited=100" | xargs -r docker rm
+
+echo "removing untagged images"
+
+docker images -q --filter "dangling=true" | xargs -r docker rmi

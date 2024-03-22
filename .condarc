@@ -1,0 +1,10 @@
+channels:
+  - conda-forge
+show_channel_urls: true
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud 
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  nvidia: https://conda.anaconda.org/
+pkgs_dirs:
+  - /home/devops/.conda/pkgs
+changeps1: False
